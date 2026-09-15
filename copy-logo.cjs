@@ -46,6 +46,30 @@ fs.writeFileSync(path.join(publicAssetsDir, 'logo.png'), imgBuffer);
 fs.writeFileSync(path.join(publicAssetsDir, 'brand-logo.png'), imgBuffer);
 fs.writeFileSync(path.join(srcAssetsDir, 'exact-logo.png'), imgBuffer);
 
+// Favicon candidates
+const faviconCandidates = [
+  'C:/Users/hp/.gemini/antigravity/brain/62ec88c2-71ed-42b0-9afb-cb0e993908df/.user_uploaded/media_1789454689151.png',
+  'C:/Users/hp/.gemini/antigravity/brain/62ec88c2-71ed-42b0-9afb-cb0e993908df/.user_uploaded/media_1789454546828.png',
+  'C:/Users/hp/.gemini/antigravity/brain/62ec88c2-71ed-42b0-9afb-cb0e993908df/.user_uploaded/media_1789454485333.png',
+];
+
+let faviconPath = null;
+for (const fp of faviconCandidates) {
+  if (fs.existsSync(fp)) {
+    faviconPath = fp;
+    break;
+  }
+}
+
+if (faviconPath) {
+  const favBuffer = fs.readFileSync(faviconPath);
+  fs.writeFileSync(path.join(publicDir, 'favicon.png'), favBuffer);
+  fs.writeFileSync(path.join(publicDir, 'favicon.ico'), favBuffer);
+  fs.writeFileSync(path.join(publicDir, 'apple-touch-icon.png'), favBuffer);
+  fs.writeFileSync(path.join(publicAssetsDir, 'favicon.png'), favBuffer);
+  console.log('Successfully saved favicon to public/favicon.png and favicon.ico');
+}
+
 // Write TypeScript Data URI file
 const tsCode = `// Generated exact authoritative logo image from uploaded user file
 export const EXACT_BRAND_IMAGE_DATA_URI = ${JSON.stringify(base64Data)};

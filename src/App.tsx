@@ -80,6 +80,18 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Ensure favicon is set to the authoritative emblem
+  useEffect(() => {
+    let link = document.querySelector("link[rel~='icon']") as HTMLLinkElement | null;
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.head.appendChild(link);
+    }
+    link.type = 'image/png';
+    link.href = '/favicon.png';
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#f8f9ff] text-[#0b1c30] antialiased flex flex-col selection:bg-[#fea619] selection:text-[#684000]">
       {/* 1. Header with fixed navigation */}
