@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { HERO_DATA } from '../data/programData';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
@@ -7,6 +7,33 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onApplyClick }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.defaultMuted = true;
+      video.muted = true;
+      video.loop = true;
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          const handleFirstInteraction = () => {
+            if (videoRef.current) {
+              videoRef.current.play().catch(() => {});
+            }
+            window.removeEventListener('click', handleFirstInteraction);
+            window.removeEventListener('touchstart', handleFirstInteraction);
+            window.removeEventListener('scroll', handleFirstInteraction);
+          };
+          window.addEventListener('click', handleFirstInteraction, { once: true });
+          window.addEventListener('touchstart', handleFirstInteraction, { once: true });
+          window.addEventListener('scroll', handleFirstInteraction, { once: true });
+        });
+      }
+    }
+  }, []);
+
   const whatsappUrl = `https://wa.me/${HERO_DATA.whatsappNumber}?text=${encodeURIComponent(
     HERO_DATA.whatsappMessage
   )}`;
@@ -122,12 +149,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onApplyClick }) => {
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[1/1] w-full bg-[#0a1526]">
                 {/* Embedded HTML5 Video */}
                 <video
+                  ref={videoRef}
                   id="hero-main-video"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover pointer-events-none select-none"
                   autoPlay
                   loop
                   muted
                   playsInline
+                  preload="auto"
+                  onEnded={(e) => {
+                    e.currentTarget.currentTime = 0;
+                    e.currentTarget.play().catch(() => {});
+                  }}
                 >
                   <source src="/assets/hero%20section%20video.mp4" type="video/mp4" />
                   <source src="/assets/hero section video.mp4" type="video/mp4" />
