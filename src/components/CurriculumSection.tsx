@@ -53,12 +53,12 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
             <button
               id="curriculum-toggle-all-btn"
               type="button"
               onClick={toggleAll}
-              className="px-3.5 py-2.5 rounded-xl border border-[#dce9ff] bg-white font-label-md text-[12px] font-bold text-[#44474c] hover:bg-[#e5eeff] hover:text-[#0b1c30] transition-colors cursor-pointer"
+              className="flex-1 sm:flex-none text-center px-3.5 py-2.5 rounded-xl border border-[#dce9ff] bg-white font-label-md text-[12px] font-bold text-[#44474c] hover:bg-[#e5eeff] hover:text-[#0b1c30] transition-colors cursor-pointer whitespace-nowrap"
             >
               {openModuleIds.length === CURRICULUM_MODULES.length
                 ? 'Collapse All'
@@ -68,7 +68,7 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({
               id="curriculum-download-pdf-btn"
               type="button"
               onClick={onOpenSyllabusModal}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#e5eeff] font-label-lg text-[14px] font-bold text-[#0b1c30] hover:bg-[#dce9ff] transition-colors cursor-pointer"
+              className="flex-1 sm:flex-none justify-center inline-flex items-center gap-1.5 xs:gap-2 px-4 xs:px-5 py-2.5 rounded-xl bg-[#e5eeff] font-label-lg text-[13px] xs:text-[14px] font-bold text-[#0b1c30] hover:bg-[#dce9ff] transition-colors cursor-pointer whitespace-nowrap"
             >
               <span>Download Syllabus PDF</span>
               <span className="material-symbols-outlined text-[18px]">

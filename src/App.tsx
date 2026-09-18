@@ -18,8 +18,10 @@ import { Footer } from './components/Footer';
 import { FloatingActions } from './components/FloatingActions';
 import { EligibilityModal } from './components/EligibilityModal';
 import { SyllabusModal } from './components/SyllabusModal';
+import { SplashBanner } from './components/SplashBanner';
 
 export default function App() {
+  const [showSplashBanner, setShowSplashBanner] = useState(true);
   const [activeSection, setActiveSection] = useState('home');
   const [isEligibilityModalOpen, setIsEligibilityModalOpen] = useState(false);
   const [isSyllabusModalOpen, setIsSyllabusModalOpen] = useState(false);
@@ -32,7 +34,7 @@ export default function App() {
 
     const element = document.getElementById(targetId);
     if (element) {
-      const headerOffset = 80;
+      const headerOffset = 90;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -93,7 +95,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f8f9ff] text-[#0b1c30] antialiased flex flex-col selection:bg-[#fea619] selection:text-[#684000]">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#f8f9ff] text-[#0b1c30] antialiased flex flex-col selection:bg-[#fea619] selection:text-[#684000]">
       {/* 1. Header with fixed navigation */}
       <Header
         activeSection={activeSection}
@@ -102,7 +104,7 @@ export default function App() {
       />
 
       {/* Main Page Content */}
-      <main className="w-full pt-[76px] sm:pt-[84px] bg-[#f8f9ff] min-h-screen flex flex-col">
+      <main className="w-full overflow-x-hidden pt-[72px] xs:pt-[80px] sm:pt-[88px] md:pt-[96px] lg:pt-[102px] bg-[#f8f9ff] min-h-screen flex flex-col">
         {/* Top Urgency / Notification Announcement */}
         <TopAlert />
 
@@ -168,6 +170,17 @@ export default function App() {
         onClose={() => setIsSyllabusModalOpen(false)}
         onApply={handleApplyClick}
       />
+
+      {/* Intro Splash Banner (Shown for 5 seconds before opening site) */}
+      {showSplashBanner && (
+        <SplashBanner
+          onEnterSite={() => setShowSplashBanner(false)}
+          onApplyDirectly={() => {
+            setShowSplashBanner(false);
+            handleApplyClick();
+          }}
+        />
+      )}
     </div>
   );
 }

@@ -15,29 +15,6 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({
 
   return (
     <>
-      {/* Floating WhatsApp Quick Connect */}
-      <aside
-        id="floating-whatsapp-container"
-        className="fixed bottom-24 sm:bottom-8 right-4 sm:right-8 z-40"
-      >
-        <a
-          id="floating-whatsapp-btn"
-          className="group flex items-center gap-2.5 sm:gap-3 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-full bg-[#22288D] text-white shadow-[0_12px_28px_rgba(34,40,141,0.35)] hover:scale-105 transition-all duration-200 border border-[#25D366]/60 hover:border-[#25D366]"
-          href={whatsappUrl}
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label="WhatsApp Quick Connect"
-        >
-          <WhatsAppIcon size={28} animated={true} />
-          <span className="font-label-lg text-[14px] font-bold hidden sm:inline">
-            WhatsApp Quick Connect
-          </span>
-          <span className="font-label-sm text-[12px] sm:hidden font-bold">
-            WhatsApp
-          </span>
-        </a>
-      </aside>
-
       {/* Mobile Sticky Bottom Action Bar */}
       <aside
         id="mobile-bottom-bar"

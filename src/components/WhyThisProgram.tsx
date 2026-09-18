@@ -22,11 +22,11 @@ export const WhyThisProgram: React.FC = () => {
           {/* The Struggle of Freshers */}
           <div
             id="struggle-of-freshers-card"
-            className="p-6 sm:p-8 rounded-3xl bg-[#eff4ff] flex flex-col gap-6 shadow-sm border border-[#dce9ff]"
+            className="p-6 sm:p-8 rounded-3xl bg-[#eff4ff] flex flex-col gap-6 shadow-sm border border-[#dce9ff] transition-all duration-300 hover:shadow-md"
           >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#ffdad6] text-[#93000a] flex items-center justify-center">
-                <span className="material-symbols-outlined text-[24px]">
+              <div className="w-11 h-11 rounded-2xl bg-[#ffdad6] text-[#93000a] flex items-center justify-center font-bold shadow-sm shrink-0">
+                <span className="material-symbols-outlined text-[26px]">
                   sentiment_dissatisfied
                 </span>
               </div>
@@ -34,47 +34,55 @@ export const WhyThisProgram: React.FC = () => {
                 <span className="font-label-sm text-[11px] uppercase tracking-wider text-[#ba1a1a] font-bold">
                   सध्याची अडचण
                 </span>
-                <h3 className="font-headline-sm text-[20px] font-bold text-[#0b1c30]">
+                <h3 className="font-headline-sm text-[21px] sm:text-[23px] font-bold text-[#0b1c30] tracking-tight">
                   The Struggle of Freshers
                 </h3>
               </div>
             </div>
 
-            <ul className="flex flex-col gap-3 font-body-md text-[14px] text-[#44474c]">
-              <li className="flex items-start gap-2.5 p-3.5 rounded-xl bg-white/90 shadow-2xs">
-                <span className="material-symbols-outlined text-[#ba1a1a] text-[20px] shrink-0 mt-0.5">
-                  close
-                </span>
+            <ul className="flex flex-col gap-3 font-body-md text-[14px] sm:text-[14.5px] text-[#44474c]">
+              <li className="group flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/95 border border-[#e2edff] shadow-xs transition-all duration-200 hover:bg-white hover:border-[#ffdad6] hover:-translate-y-0.5">
+                <div className="w-7 h-7 rounded-lg bg-[#ffdad6]/70 text-[#ba1a1a] flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-[20px]">
+                    close
+                  </span>
+                </div>
                 <span>
                   <strong className="text-[#0b1c30]">फक्त पुस्तकी ज्ञान:</strong>{' '}
                   कॉलेजमध्ये मार्केटिंगच्या संकल्पना शिकवल्या जातात, पण खऱ्या
                   कस्टमरशी कसे बोलायचे हे शिकवले जात नाही.
                 </span>
               </li>
-              <li className="flex items-start gap-2.5 p-3.5 rounded-xl bg-white/90 shadow-2xs">
-                <span className="material-symbols-outlined text-[#ba1a1a] text-[20px] shrink-0 mt-0.5">
-                  close
-                </span>
+              <li className="group flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/95 border border-[#e2edff] shadow-xs transition-all duration-200 hover:bg-white hover:border-[#ffdad6] hover:-translate-y-0.5">
+                <div className="w-7 h-7 rounded-lg bg-[#ffdad6]/70 text-[#ba1a1a] flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-[20px]">
+                    close
+                  </span>
+                </div>
                 <span>
                   <strong className="text-[#0b1c30]">कॉल आणि संवादाची भीती:</strong>{' '}
                   अनपेक्षित ग्राहकांना सामोरे जाण्याचा आत्मविश्वास आणि फोनवर
                   व्यावसायिक बोलण्याची सवय नसते.
                 </span>
               </li>
-              <li className="flex items-start gap-2.5 p-3.5 rounded-xl bg-white/90 shadow-2xs">
-                <span className="material-symbols-outlined text-[#ba1a1a] text-[20px] shrink-0 mt-0.5">
-                  close
-                </span>
+              <li className="group flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/95 border border-[#e2edff] shadow-xs transition-all duration-200 hover:bg-white hover:border-[#ffdad6] hover:-translate-y-0.5">
+                <div className="w-7 h-7 rounded-lg bg-[#ffdad6]/70 text-[#ba1a1a] flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-[20px]">
+                    close
+                  </span>
+                </div>
                 <span>
                   <strong className="text-[#0b1c30]">लीड जनरेशन माहित नाही:</strong>{' '}
                   व्यवसायासाठी योग्य ग्राहक (Leads) कसे शोधायचे आणि CRM टूल्स कसे
                   हाताळायचे याचा शून्य अनुभव.
                 </span>
               </li>
-              <li className="flex items-start gap-2.5 p-3.5 rounded-xl bg-white/90 shadow-2xs">
-                <span className="material-symbols-outlined text-[#ba1a1a] text-[20px] shrink-0 mt-0.5">
-                  close
-                </span>
+              <li className="group flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/95 border border-[#e2edff] shadow-xs transition-all duration-200 hover:bg-white hover:border-[#ffdad6] hover:-translate-y-0.5">
+                <div className="w-7 h-7 rounded-lg bg-[#ffdad6]/70 text-[#ba1a1a] flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-[20px]">
+                    close
+                  </span>
+                </div>
                 <span>
                   <strong className="text-[#0b1c30]">'Experience हवा' हा रिजेक्शन:</strong>{' '}
                   प्रत्येक कंपनी १-२ वर्षांचा अनुभव मागते, पण अनुभव मिळवायचा कुठे?
@@ -82,8 +90,8 @@ export const WhyThisProgram: React.FC = () => {
               </li>
             </ul>
 
-            <div className="mt-auto p-4 rounded-xl bg-[#ffdad6]/60 text-[#93000a] font-label-md text-[13px] font-semibold flex items-center gap-2">
-              <span>⚠️</span>
+            <div className="mt-auto p-4 rounded-2xl bg-[#ffdad6]/70 text-[#93000a] font-label-md text-[13px] font-bold flex items-center gap-2 border border-[#ffb4ab]/40">
+              <span className="text-[16px]">⚠️</span>
               <span>परिणाम: महिनोमहिने जॉबलेस राहणे किंवा अत्यंत कमी पगारात तडजोड करणे.</span>
             </div>
           </div>
@@ -91,70 +99,99 @@ export const WhyThisProgram: React.FC = () => {
           {/* What You Gain in this Program */}
           <div
             id="gains-of-program-card"
-            className="p-6 sm:p-8 rounded-3xl bg-[#0e1c2f] text-[#eaf1ff] flex flex-col gap-6 shadow-xl border border-[#213145]"
+            className="relative overflow-hidden p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#0c1829] via-[#10223a] to-[#07111e] text-[#eaf1ff] flex flex-col gap-6 shadow-[0_12px_35px_rgba(10,25,50,0.5)] border border-[#fea619]/35 transition-all duration-300 hover:border-[#fea619]/60 hover:shadow-[0_16px_45px_rgba(254,166,25,0.2)]"
           >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#fea619] text-[#684000] flex items-center justify-center font-bold shadow-md">
-                <span className="material-symbols-outlined text-[24px]">
+            {/* Ambient Background Glow */}
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#fea619]/10 rounded-full blur-3xl pointer-events-none -z-0" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#22288D]/30 rounded-full blur-2xl pointer-events-none -z-0" />
+
+            {/* Moving Sheen Effect */}
+            <div className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none animate-card-sheen z-0" />
+
+            {/* Header / Badge Area */}
+            <div className="relative z-10 flex items-center gap-3">
+              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#ffb733] to-[#fea619] text-[#553300] flex items-center justify-center font-bold shadow-[0_4px_16px_rgba(254,166,25,0.4)] animate-gold-pulse shrink-0">
+                <span className="material-symbols-outlined text-[26px]">
                   verified
                 </span>
               </div>
               <div>
-                <span className="font-label-sm text-[11px] uppercase tracking-wider text-[#fea619] font-bold">
+                <span className="inline-flex items-center gap-1.5 font-label-sm text-[11px] uppercase tracking-wider text-[#fea619] font-extrabold">
+                  <span className="w-2 h-2 rounded-full bg-[#fea619] animate-ping inline-block" />
                   तुमचा फायदा
                 </span>
-                <h3 className="font-headline-sm text-[20px] font-bold text-white">
+                <h3 className="font-headline-sm text-[21px] sm:text-[23px] font-extrabold text-white tracking-tight">
                   What You Gain in this Program
                 </h3>
               </div>
             </div>
 
-            <ul className="flex flex-col gap-3 font-body-md text-[14px]">
-              <li className="flex items-start gap-2.5 p-3.5 rounded-xl bg-[#213145] text-[#eaf1ff]">
-                <span className="material-symbols-outlined text-[#fea619] text-[20px] shrink-0 mt-0.5">
-                  check_circle
-                </span>
-                <span>
-                  <strong className="text-white">प्रत्यक्ष कस्टमर हँडलिंग:</strong>{' '}
+            {/* Interactive Feature Cards */}
+            <ul className="relative z-10 flex flex-col gap-3 font-body-md text-[14px] sm:text-[14.5px]">
+              {/* Item 1 */}
+              <li className="group flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-[#16273e]/90 hover:bg-[#1d3350] border border-[#263e5e] hover:border-[#fea619]/60 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.3)]">
+                <div className="w-7 h-7 rounded-lg bg-[#fea619]/20 text-[#fea619] flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 group-hover:bg-[#fea619] group-hover:text-[#553300] transition-all duration-200">
+                  <span className="material-symbols-outlined text-[20px]">
+                    check
+                  </span>
+                </div>
+                <span className="text-[#e1ebfa] leading-relaxed">
+                  <strong className="text-white font-bold group-hover:text-[#ffca66] transition-colors">प्रत्यक्ष कस्टमर हँडलिंग:</strong>{' '}
                   पहिल्या महिन्यापासूनच रियल प्रॉडक्ट्स आणि सर्व्हिसेससाठी
                   ग्राहकांशी थेट संवाद.
                 </span>
               </li>
-              <li className="flex items-start gap-2.5 p-3.5 rounded-xl bg-[#213145] text-[#eaf1ff]">
-                <span className="material-symbols-outlined text-[#fea619] text-[20px] shrink-0 mt-0.5">
-                  check_circle
-                </span>
-                <span>
-                  <strong className="text-white">लाईव्ह लीड जनरेशन सिस्टीम:</strong>{' '}
+
+              {/* Item 2 */}
+              <li className="group flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-[#16273e]/90 hover:bg-[#1d3350] border border-[#263e5e] hover:border-[#fea619]/60 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.3)]">
+                <div className="w-7 h-7 rounded-lg bg-[#fea619]/20 text-[#fea619] flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 group-hover:bg-[#fea619] group-hover:text-[#553300] transition-all duration-200">
+                  <span className="material-symbols-outlined text-[20px]">
+                    check
+                  </span>
+                </div>
+                <span className="text-[#e1ebfa] leading-relaxed">
+                  <strong className="text-white font-bold group-hover:text-[#ffca66] transition-colors">लाईव्ह लीड जनरेशन सिस्टीम:</strong>{' '}
                   Meta Ads, B2B कोल्ड आउटरीच आणि WhatsApp फनेल्सचा वापर करून
                   स्वतः लीड्स आणणे.
                 </span>
               </li>
-              <li className="flex items-start gap-2.5 p-3.5 rounded-xl bg-[#213145] text-[#eaf1ff]">
-                <span className="material-symbols-outlined text-[#fea619] text-[20px] shrink-0 mt-0.5">
-                  check_circle
-                </span>
-                <span>
-                  <strong className="text-white">सेल्स क्लोजिंग व निगोशिएशन:</strong>{' '}
+
+              {/* Item 3 */}
+              <li className="group flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-[#16273e]/90 hover:bg-[#1d3350] border border-[#263e5e] hover:border-[#fea619]/60 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.3)]">
+                <div className="w-7 h-7 rounded-lg bg-[#fea619]/20 text-[#fea619] flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 group-hover:bg-[#fea619] group-hover:text-[#553300] transition-all duration-200">
+                  <span className="material-symbols-outlined text-[20px]">
+                    check
+                  </span>
+                </div>
+                <span className="text-[#e1ebfa] leading-relaxed">
+                  <strong className="text-white font-bold group-hover:text-[#ffca66] transition-colors">सेल्स क्लोजिंग व निगोशिएशन:</strong>{' '}
                   किमतीवर घासाघिस करणाऱ्या ग्राहकांना समाधानकारक डील कशी द्यायची
                   याचे तंत्र.
                 </span>
               </li>
-              <li className="flex items-start gap-2.5 p-3.5 rounded-xl bg-[#213145] text-[#eaf1ff]">
-                <span className="material-symbols-outlined text-[#fea619] text-[20px] shrink-0 mt-0.5">
-                  check_circle
-                </span>
-                <span>
-                  <strong className="text-white">इंटरिव्ह्यू क्रॅक करण्याची खात्री:</strong>{' '}
+
+              {/* Item 4 */}
+              <li className="group flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-[#16273e]/90 hover:bg-[#1d3350] border border-[#263e5e] hover:border-[#fea619]/60 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.3)]">
+                <div className="w-7 h-7 rounded-lg bg-[#fea619]/20 text-[#fea619] flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 group-hover:bg-[#fea619] group-hover:text-[#553300] transition-all duration-200">
+                  <span className="material-symbols-outlined text-[20px]">
+                    check
+                  </span>
+                </div>
+                <span className="text-[#e1ebfa] leading-relaxed">
+                  <strong className="text-white font-bold group-hover:text-[#ffca66] transition-colors">इंटरिव्ह्यू क्रॅक करण्याची खात्री:</strong>{' '}
                   मॉक इंटरिव्ह्यू, कॉर्पोरेट ईमेल रायटिंग आणि प्रूव्हन पोर्टफोलिओ
                   सोबत रेझ्युमे.
                 </span>
               </li>
             </ul>
 
-            <div className="mt-auto p-4 rounded-xl bg-[#fea619] text-[#684000] font-label-md text-[13px] font-extrabold flex items-center justify-between shadow-md">
-              <span>🚀 निकाल: कंपन्या तुम्हाला प्राधान्याने निवडतील!</span>
-              <span className="material-symbols-outlined text-[20px]">
+            {/* Dynamic Result Footer Strip */}
+            <div className="relative z-10 mt-auto p-4 rounded-2xl bg-gradient-to-r from-[#fea619] via-[#ffb944] to-[#fea619] text-[#4d2d00] font-label-md text-[13.5px] font-extrabold flex items-center justify-between shadow-[0_6px_22px_rgba(254,166,25,0.4)] transition-transform duration-200 hover:scale-[1.02]">
+              <span className="flex items-center gap-2">
+                <span className="text-[17px] animate-badge-bounce">🚀</span>
+                <span>निकाल: कंपन्या तुम्हाला प्राधान्याने निवडतील!</span>
+              </span>
+              <span className="material-symbols-outlined text-[22px] animate-bounce">
                 trending_up
               </span>
             </div>

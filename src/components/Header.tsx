@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({
           : 'shadow-[0_2px_15px_rgba(10,20,60,0.25)] border-b border-[#2d34a8]'
       }`}
     >
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-4">
+      <div className="w-full max-w-[1440px] mx-auto px-3.5 xs:px-4 sm:px-6 lg:px-8 py-2 xs:py-2.5 sm:py-3 flex items-center justify-between gap-3 sm:gap-4">
         {/* ========================================================
             AUTHORITATIVE BRAND LOGO & COMPANY IDENTITY (LEFT)
             ======================================================== */}
@@ -86,11 +86,11 @@ export const Header: React.FC<HeaderProps> = ({
           id="header-brand-logo"
           href="#home"
           onClick={(e) => handleNavClick('home', e)}
-          className="flex items-center gap-2 group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#fea619] rounded-lg shrink-0"
+          className="flex items-center gap-2 group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#fea619] rounded-lg shrink-0 py-0.5"
           aria-label="INFOYASHONAND TECHNOLOGY PVT. LTD. Home"
           title="INFOYASHONAND TECHNOLOGY PVT. LTD."
         >
-          <CompanyLogo className="h-11 sm:h-13 md:h-14 lg:h-[62px] w-auto" />
+          <CompanyLogo className="h-[48px] xs:h-[56px] sm:h-[64px] md:h-[70px] lg:h-[76px] xl:h-[82px] w-auto max-w-[260px] xs:max-w-[310px] sm:max-w-none" />
         </a>
 
         {/* ========================================================
@@ -183,7 +183,7 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer & Backdrop */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[70px] sm:top-[78px] z-40 lg:hidden flex flex-col">
+        <div className="fixed inset-0 top-[68px] xs:top-[76px] sm:top-[84px] md:top-[90px] z-40 lg:hidden flex flex-col">
           {/* Backdrop Overlay */}
           <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10 transition-opacity animate-in fade-in duration-200"
@@ -198,7 +198,7 @@ export const Header: React.FC<HeaderProps> = ({
           >
             {/* Quick Header in Drawer */}
             <div className="flex items-center justify-between pb-3 mb-2 border-b border-white/10">
-              <CompanyLogo className="h-9 sm:h-10 w-auto" />
+              <CompanyLogo className="h-10 sm:h-12 w-auto" />
               <span className="font-label-sm text-[11px] font-bold uppercase tracking-wider text-[#fea619]">
                 Menu &amp; Navigation
               </span>

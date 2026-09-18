@@ -18,8 +18,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Col 1: Brand overview */}
           <div className="lg:col-span-5 flex flex-col gap-4">
             <div className="flex items-center">
-              <div className="bg-[#22288D] px-3.5 py-2 rounded-xl inline-flex items-center shadow-sm">
-                <CompanyLogo className="h-10 sm:h-11 md:h-12 w-auto" />
+              <div className="bg-[#22288D] px-4 py-2.5 rounded-xl inline-flex items-center shadow-sm">
+                <CompanyLogo className="h-12 sm:h-14 md:h-16 w-auto" />
               </div>
             </div>
 

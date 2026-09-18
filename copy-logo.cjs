@@ -70,6 +70,26 @@ if (faviconPath) {
   console.log('Successfully saved favicon to public/favicon.png and favicon.ico');
 }
 
+// Intro banner candidate
+const bannerCandidates = [
+  'C:/Users/hp/.gemini/antigravity/brain/62ec88c2-71ed-42b0-9afb-cb0e993908df/.user_uploaded/media_1789703527869.jpg',
+];
+
+let bannerPath = null;
+for (const bp of bannerCandidates) {
+  if (fs.existsSync(bp)) {
+    bannerPath = bp;
+    break;
+  }
+}
+
+if (bannerPath) {
+  const bannerBuffer = fs.readFileSync(bannerPath);
+  fs.writeFileSync(path.join(publicAssetsDir, 'intro-banner.jpg'), bannerBuffer);
+  fs.writeFileSync(path.join(srcAssetsDir, 'intro-banner.jpg'), bannerBuffer);
+  console.log('Successfully saved intro banner to public/assets/intro-banner.jpg');
+}
+
 // Write TypeScript Data URI file
 const tsCode = `// Generated exact authoritative logo image from uploaded user file
 export const EXACT_BRAND_IMAGE_DATA_URI = ${JSON.stringify(base64Data)};

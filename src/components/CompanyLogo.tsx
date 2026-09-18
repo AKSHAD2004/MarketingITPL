@@ -9,7 +9,7 @@ interface CompanyLogoProps {
 let cachedTransparentLogo: string | null = null;
 
 export const CompanyLogo: React.FC<CompanyLogoProps> = ({
-  className = 'h-11 sm:h-13 md:h-14 lg:h-[62px] w-auto',
+  className = 'h-[48px] xs:h-[56px] sm:h-[64px] md:h-[70px] lg:h-[76px] w-auto',
 }) => {
   const [logoSrc, setLogoSrc] = useState<string>(cachedTransparentLogo || '/assets/dashboard-logo.jpg');
 
